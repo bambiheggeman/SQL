@@ -1,0 +1,30 @@
+CREATE TABLE celebrities (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER,
+    nationality TEXT);
+    
+INSERT INTO celebrities (name, age, nationality) VALUES ("Cher", 76, "US");
+INSERT INTO celebrities (name, age, nationality) VALUES ("Lil Peep", 21, "US");
+INSERT INTO celebrities (name, age, nationality) VALUES ("Kimya Dawson", 50, "US");
+INSERT INTO celebrities (name, age, nationality) VALUES ("Esther Perel", 65, "Belgium");
+INSERT INTO celebrities (name, age, nationality) VALUES ("Va Davis", 54, "Germany");
+
+CREATE table misc_info (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    celebrity_id INTEGER,
+    net_worth INTEGER,
+    project TEXT);
+    
+INSERT INTO misc_info (celebrity_id, net_worth, project) VALUES (1, "380000000", "Life After Love");
+INSERT INTO misc_info (celebrity_id, net_worth, project) VALUES (2, "300000", "Star Shopping");
+INSERT INTO misc_info (celebrity_id, net_worth, project) VALUES (3, "5000000", "Walk Like Thunder");
+INSERT INTO misc_info (celebrity_id, net_worth, project) VALUES (4, "5000000", "Mating In Captivity");
+INSERT INTO misc_info (celebrity_id, net_worth, project) VALUES (5, "1000000", "That Fertile Feeling");
+
+
+SELECT celebrities.name, misc_info.net_worth
+FROM celebrities
+JOIN misc_info
+ON celebrities.id = misc_info.celebrity_id
+ORDER BY net_worth ASC;
