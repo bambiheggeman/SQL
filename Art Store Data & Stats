@@ -1,0 +1,24 @@
+CREATE TABLE artsupply_store (id INTEGER PRIMARY KEY, item TEXT, aisle INTEGER, price$ INTEGER, stock INTEGER);
+INSERT INTO artsupply_store VALUES (1, "paint", 1, 10, 1000);
+INSERT INTO artsupply_store VALUES (2, "brushes", 1, 5, 1000);
+INSERT INTO artsupply_store VALUES (3, "paletteknives", 1, 7, 500);
+INSERT INTO artsupply_store VALUES (4, "panels", 2, 15, 950);
+INSERT INTO artsupply_store VALUES (5, "canvasrolls", 2, 10, 925);
+INSERT INTO artsupply_store VALUES (6, "mediums", 1, 8, 800);
+INSERT INTO artsupply_store VALUES (7, "clay", 3, 20, 100);
+INSERT INTO artsupply_store VALUES (8, "glaze", 3, 10, 500);
+INSERT INTO artsupply_store VALUES (9, "paper", 4, 8, 900);
+INSERT INTO artsupply_store VALUES (10, "oil pastels", 4, 15, 250);
+INSERT INTO artsupply_store VALUES (11, "charcoal", 4, 5, 500);
+INSERT INTO artsupply_store VALUES (12, "watercolors", 4, 15, 400);
+INSERT INTO artsupply_store VALUES (13, "frames", 5, 15, 700);
+INSERT INTO artsupply_store VALUES (14, "stickers", 5, 5, 350);
+INSERT INTO artsupply_store VALUES (15, "markers", 4, 8, 100);
+
+-- display the database ordered by price.
+
+ SELECT * FROM artsupply_store ORDER BY price$;
+
+-- what is the total sum of items in the store?
+
+SELECT SUM(stock) FROM artsupply_store; 
