@@ -1,3 +1,6 @@
+In this project, I used SQL to aggregate data using an inner join. Below I've combined data on Artists & Thinkers into one cohesive 
+table which matches each person listed with their net worth and a significant project they've produced. 
+
 CREATE TABLE celebrities (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
