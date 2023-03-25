@@ -17,7 +17,14 @@ INSERT INTO artsupply_store VALUES (15, "markers", 4, 8, 100);
 
 -- display the database ordered by price.
 
- SELECT * FROM artsupply_store ORDER BY price$;
+ SELECT * FROM artsupply_store ORDER BY price$ desc;
+ 
+ -- what are the 5 most affordable items in the store?
+ 
+SELECT item
+FROM artsupply_store
+order by price$ asc
+limit 5;
 
 -- what is the total sum of items in the store?
 
